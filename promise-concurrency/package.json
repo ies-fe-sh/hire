@@ -1,0 +1,35 @@
+{
+  "name": "promise-concurrency",
+  "version": "1.0.0",
+  "description": "Promise concurrency pool",
+  "main": "index.js",
+  "repository": "https://github.com/ies-fe-sh/hire",
+  "author": "longyinan.brooklyn@bytedance.com",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "@swc-node/register": "^1.0.1",
+    "@types/sinon": "^9.0.8",
+    "ava": "^3.13.0",
+    "sinon": "^9.2.1",
+    "typescript": "^4.0.5"
+  },
+  "scripts": {
+    "test": "ava --verbose"
+  },
+  "ava": {
+    "extensions": [
+      "ts"
+    ],
+    "require": [
+      "@swc-node/register"
+    ],
+    "environmentVariables": {
+      "TS_NODE_PROJECT": "./tsconfig.json"
+    },
+    "timeout": "20s",
+    "files": [
+      "./**/*.spec.{ts,tsx}"
+    ]
+  }
+}
